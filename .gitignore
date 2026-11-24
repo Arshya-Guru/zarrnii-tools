@@ -1,0 +1,16 @@
+# pixi environments
+.pixi/*
+!.pixi/config.toml
+
+# OS / Python clutter
+.DS_Store
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# never commit image data
+*.nii
+*.nii.gz
+*.h5
+*.ims
+*.zarr/

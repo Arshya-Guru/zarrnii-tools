@@ -1,0 +1,39 @@
+[workspace]
+authors = ["Arshya-Guru <apooladi@uwo.ca>"]
+channels = ["conda-forge"]
+name = "zarrnii-tools"
+description = "GUI tools for converting light-sheet images (NIfTI, HDF5, OME-Zarr) and building masks, using zarrnii"
+platforms = ["osx-arm64", "win-64", "osx-64"]
+version = "0.1.0"
+
+[tasks]
+lab = "jupyter lab"
+napari = "napari"
+app = "python -m converter.gui"
+mask = "python -m converter.mask"
+test = "pytest -q tests"
+
+[dependencies]
+python = "3.12.*"
+numpy = ">=2.5.5,<3"
+scipy = ">=1.18.1,<2"
+scikit-image = ">=0.26.0,<0.27"
+matplotlib = ">=3.11.2,<4"
+pandas = ">=3.1.1,<4"
+tifffile = ">=2026.11.16,<2027"
+imageio = ">=2.38.2,<3"
+pillow = ">=13.0.0,<14"
+opencv = ">=5.1.0,<6"
+nibabel = ">=5.5.0,<6"
+zarr = ">=3.4.2,<4"
+dask = ">=2026.11.0,<2027"
+napari = ">=0.10.0,<0.11"
+pyqt = ">=5.15.11,<6"
+jupyterlab = ">=4.6.6,<5"
+ipykernel = ">=7.4.0,<8"
+distributed = ">=2026.11.0,<2027"
+s3fs = ">=2026.9.0,<2027"
+pytest = ">=9.2.0,<10"
+
+[pypi-dependencies]
+zarrnii = ">=0.22.3, <0.23"
